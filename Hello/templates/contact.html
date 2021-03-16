@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block title %}Contact us{% endblock title %}
+
+{% block body %}
+
+    <div class="container-fluid px-0">
+        <img src="https://source.unsplash.com/1600x500/?phone,contact"  class="d-block w-100 mx-0" alt="...">
+
+    </div>
+    
+        <header>
+            <section class="breadcrmb-section">
+                <div class="container p-1 p-sm-3">
+                    <div class="row">
+                        <div class="cal-12">
+                            <h2>Contact Us</h2>
+                          
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+               <div class="container">
+                   <div class="row">
+                       <div class="col-12">
+                            <p>We are always here to help. If your have any requirements/Queries about our services, fill up the contact from below and we"ll do our best to reply within 24 hours Alternatively Simply pickup the phone and give us a call.</p>
+                            <hr/>
+                        </div>
+                    </div>
+               </div>
+            </section>
+            
+            <section class="from-section my-4 container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form action="/contact" method="post">
+                            {% csrf_token %}
+                                <div class="from-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="from-control"name="name" placeholder="Full Name *">
+                                    </div><br>
+                                    <div class="form-group col-md-6">
+                                        <input type="email" class="from-control"name="email" placeholder="Email Address *">
+                                    </div>
+                                </div><br>
+            
+                                <div class="from.row">
+                                    <div class="form-group col-md-6">
+                                        <input type="number" class="from-control"name="phone" placeholder="Contact Number *">
+                                    </div><br>
+                                   
+                                </div>
+                                
+                                <div class="from.row">
+                                    <div class="form-group col-md-12">
+                                        <textarea rows="10" cols="70" class="from-control"name="desc" rows="4" placeholder="tell about yourself"></textarea>
+                                    </div><br>
+                                </div>
+                                <div class="from.row">
+                                    <div class="form-group col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i>
+                                        Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        
+                        </div>
+                    
+                    <div class="col-md-6 address">
+                        <h5>Call us / Whatsapp</h5>
+                        <p><a href="Tel:+919922859277"><i class="fas fa-phone"></i> +(91) 9922859277</a><br>
+                        </p>
+                        <h5>Email </h5>
+                        <p><a href="mailto:helpline24hour@gmail.com"><i class="fas fa-envelope"></i>
+                            helpline24hour@gmail.com</a>
+                        </p>
+                        <h5>Working hours</h5>
+                        <p>Mon - Fri : 9am - 6pm(IST)
+                        </p>
+                        <h5>Address</h5>
+                        <p>Manchar, Pune - 410011, Maharashtra</p>
+                    </div>
+                </div>
+                </div>  
+             </section>
+            
+            
+        </header>
+{% endblock body %}
